@@ -77,6 +77,7 @@ python inference_pi_prefix.py --dataset=sst2        --model_checkpoints=[path_to
 ---
 
 ## ⏱️ Runtime Comparison  
+(All values are reported in **minutes**.) 
 
 | Dataset   | Method | Train Forget Runtime | Train Retain Runtime | Test Forget Runtime | Test Retain Runtime |
 | --------- | ------ | -------------------- | -------------------- | ------------------- | ------------------- |
