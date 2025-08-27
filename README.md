@@ -76,17 +76,7 @@ python inference_pi_prefix.py --dataset=sst2        --model_checkpoints=[path_to
 
 ---
 
-## 📄 Citation  
-If you use this code, please cite:  
-
-```bibtex
-@article{your2025piprefix,
-  title={Pseudo-Inverse Prefix Tuning for Effective Unlearning in LLMs},
-  author={Preethi Gurumurthy and P.K. Srijith},
-  year={2025},
-  journal={CIKM (ACM) 2025}
-}
-```  
+## 📄 Citation
 
 ---
 
