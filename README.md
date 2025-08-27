@@ -8,9 +8,9 @@ This repository contains the implementation of **Pseudo-Inverse Prefix Tuning (P
 PI-Prefix enables **targeted forgetting** of specific training data by learning prefix parameters on the forget set and applying a **pseudo-inverse transformation** to remove their influence—without requiring access to the retain dataset.  
 
 Key highlights:  
-- 🧹 **Effective forgetting**: Forget set accuracy → near random.  
-- 🎯 **Retention without retain data**: Preserves generalization without accessing retained samples.  
-- ⚡ **Scalable & interpretable**: Efficient, parameter-light unlearning.  
+- **Effective forgetting**: Forget set accuracy → near random.  
+- **Retention without retain data**: Preserves generalization without accessing retained samples.  
+- **Scalable & interpretable**: Efficient, parameter-light unlearning.  
 
 ---
 
@@ -28,13 +28,7 @@ Forget/retain splits used in experiments are available in:
 
 ## ⚙️ Installation  
 
-### 1. Clone the repository  
-```bash
-git clone https://github.com/your-repo/pi-prefix.git
-cd pi-prefix
-```
-
-### 2. Install dependencies  
+### Dependencies  
 ```bash
 pip install -r requirements.txt
 ```
@@ -59,7 +53,7 @@ python baselines.py --dataset=sst2 --model_checkpoints=[path_to_checkpoints]    
 
 Supported baselines:  
 - `gradient_ascent`  
-- `random_label`  
+- `random_label -- Not included in paper` 
 - `gradient_ascent_kl`  
 - `gradient_ascent_descent`  
 
@@ -82,30 +76,21 @@ python inference_pi_prefix.py --dataset=sst2        --model_checkpoints=[path_to
 
 ---
 
-## 📊 Results  
-- Forget set accuracy drops to random baseline.  
-- Retain performance preserved **without access to retain dataset**.  
-- Outperforms gradient-ascent style baselines in stability & efficiency.  
-
-(Detailed results and plots are in the thesis/report.)  
-
----
-
 ## 📄 Citation  
 If you use this code, please cite:  
 
 ```bibtex
 @article{your2025piprefix,
   title={Pseudo-Inverse Prefix Tuning for Effective Unlearning in LLMs},
-  author={Your Name and ...},
+  author={Preethi Gurumurthy and P.K. Srijith},
   year={2025},
-  journal={ACL 2025 (Under Review)}
+  journal={CIKM (ACM) 2025}
 }
 ```  
 
 ---
 
-## 🙏 Acknowledgements  
+## 🤝 Acknowledgements  
 - [Hugging Face Transformers](https://github.com/huggingface/transformers)  
 - [Hugging Face Datasets](https://github.com/huggingface/datasets)  
 - [PEFT Library](https://github.com/huggingface/peft)  
