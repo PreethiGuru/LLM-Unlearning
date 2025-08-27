@@ -76,6 +76,21 @@ python inference_pi_prefix.py --dataset=sst2        --model_checkpoints=[path_to
 
 ---
 
+## ⏱️ Runtime Comparison  
+
+| Dataset   | Method | Train Forget Runtime | Train Retain Runtime | Test Forget Runtime | Test Retain Runtime |
+| --------- | ------ | -------------------- | -------------------- | ------------------- | ------------------- |
+| **SST-2** | QLoRA  | 5.52                 | 151.25               | 2.49                | 65.04               |
+|           | GA     | 5.15                 | 145.85               | 2.32                | 62.45               |
+|           | GAGD   | 5.11                 | 144.84               | 2.30                | 62.05               |
+|           | GAKL   | 5.15                 | 148.39               | 2.32                | 63.80               |
+|           | PIPT   | 6.47                 | 182.10               | 2.91                | 78.30               |
+| **Yelp**  | QLoRA  | 37.63                | 729.37               | 16.99               | 315.40              |
+|           | GA     | 35.51                | 693.13               | 16.00               | 299.05              |
+|           | GAGD   | 35.63                | 694.31               | 16.05               | 299.55              |
+|           | GAKL   | 36.17                | 689.44               | 16.30               | 297.45              |
+|           | PIPT   | 44.68                | 865.58               | 20.10               | 372.64              | 
+
 ## 📄 Citation
 
 ---
